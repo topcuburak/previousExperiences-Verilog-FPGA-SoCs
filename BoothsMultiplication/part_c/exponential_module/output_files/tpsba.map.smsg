@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at tpsba.v(45): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at sine_module.v(45): always construct contains both blocking and non-blocking assignments

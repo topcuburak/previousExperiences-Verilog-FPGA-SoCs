@@ -1,0 +1,25 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\ee314\hw_3\part_c\sine_module\simulation\modelsim
+vsine_module
+!i10b 1
+!s100 R@j9Clz90djAODGeH;EcC1
+I`mQgZkPY_c]75oA6P18c@3
+VhgZDMKXjaOGbHO3DeW2Z^0
+Z1 dC:\ee314\hw_3\part_c\sine_module\simulation\modelsim
+w1578071016
+8C:/ee314/hw_3/part_c/sine_module/sine_module.v
+FC:/ee314/hw_3/part_c/sine_module/sine_module.v
+L0 1
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1578072885.763000
+!s107 C:/ee314/hw_3/part_c/sine_module/sine_module.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ee314/hw_3/part_c/sine_module|C:/ee314/hw_3/part_c/sine_module/sine_module.v|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+C:/ee314/hw_3/part_c/sine_module -O0

@@ -1,0 +1,60 @@
+# Reading C:/ee314/ee314/modelsim_ase/tcl/vsim/pref.tcl 
+# do sine_module_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\ee314\ee314\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\ee314\ee314\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/ee314/hw_3/part_c/sine_module {C:/ee314/hw_3/part_c/sine_module/sine_module.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module sine_module
+# 
+# Top level modules:
+# 	sine_module
+# 
+vsim -voptargs=+acc work.sine_module
+# vsim -voptargs=+acc work.sine_module 
+# Loading work.sine_module
+add wave -position insertpoint  \
+sim:/sine_module/product \
+sim:/sine_module/out_sin_x \
+sim:/sine_module/inp_sin_x \
+sim:/sine_module/count_exp_sin_cos \
+sim:/sine_module/clk
+force -freeze sim:/sine_module/inp_sin_x 0000000000000011 0
+force -freeze sim:/sine_module/clk 1 0, 0 {5 ps} -r 10
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run

@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at cosine_module.v(42): always construct contains both blocking and non-blocking assignments

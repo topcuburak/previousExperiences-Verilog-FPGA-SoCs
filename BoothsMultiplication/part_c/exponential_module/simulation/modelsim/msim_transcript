@@ -1,0 +1,31 @@
+# Reading C:/ee314/ee314/modelsim_ase/tcl/vsim/pref.tcl 
+# do tpsba_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\ee314\ee314\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\ee314\ee314\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/ee314/hw_3/part_c {C:/ee314/hw_3/part_c/tpsba.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tpsba
+# 
+# Top level modules:
+# 	tpsba
+# 
+vlog -work rtl_work -refresh -force_refresh
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Refreshing module tpsba
+vcom -work rtl_work -refresh -force_refresh
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Skipping module tpsba
+vlog -work rtl_work -refresh -force_refresh
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Refreshing module tpsba
+vcom -work rtl_work -refresh -force_refresh
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Skipping module tpsba

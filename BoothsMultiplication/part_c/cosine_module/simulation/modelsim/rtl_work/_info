@@ -1,0 +1,25 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\ee314\hw_3\part_c\cosine_module\simulation\modelsim
+vcosine_module
+!i10b 1
+!s100 `amzA6fzW<dC:K^;cJgkR3
+I8EjJzFMz2aH3JfNSHg2h33
+VG8Pz:0ZMN?F:98dYkWG]^2
+Z1 dC:\ee314\hw_3\part_c\cosine_module\simulation\modelsim
+w1578071770
+8C:/ee314/hw_3/part_c/cosine_module/cosine_module.v
+FC:/ee314/hw_3/part_c/cosine_module/cosine_module.v
+L0 1
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1578071796.478000
+!s107 C:/ee314/hw_3/part_c/cosine_module/cosine_module.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ee314/hw_3/part_c/cosine_module|C:/ee314/hw_3/part_c/cosine_module/cosine_module.v|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+C:/ee314/hw_3/part_c/cosine_module -O0

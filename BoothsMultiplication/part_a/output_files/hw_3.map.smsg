@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at booth's_algorithm.v(22): always construct contains both blocking and non-blocking assignments

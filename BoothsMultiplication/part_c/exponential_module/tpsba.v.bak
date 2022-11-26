@@ -1,0 +1,102 @@
+module tpsba(input [15:0] inp_exp_x, inp_sin_x, inp_cos_x, 	//taylor_poly_series_with_booth_algorithm module
+				 input clk,
+				 output reg [15:0] out_exp_x, out_sin_x, out_cos_x);
+
+
+	reg [31:0] product;
+	reg signed [15:0] A;
+	reg [15:0] Q,M;
+	reg Q_1;
+	reg [4:0] count;
+	reg state;
+	reg [1:0] state_2;
+   reg [15:0] factorial_table [9:0];
+	reg [1:0] taylor_state;
+	reg [3:0] count_exp_sin_cos;
+	
+	
+	initial 
+	begin
+		A<=0;
+		M<=inp_exp_x;
+		Q<=inp_exp_x;
+		Q_1<=0;      
+		state<=0;
+		count<=16;
+		product<=0;
+		state_2<=0;		//factorial_table[15:0][0]<=0;
+		factorial_table[1]<=50000;
+		factorial_table[2]<=16667;
+		factorial_table[3]<=4167;
+		factorial_table[4]<=833;
+		factorial_table[5]<=138;
+		factorial_table[6]<=19;
+		factorial_table[7]<=2;
+		factorial_table[8]<=0;
+		taylor_state<=0; 
+		count_exp_sin_cos<=1;
+		
+	end
+
+always @(posedge clk)
+	begin
+		if(state==0)
+		begin
+			if (count!=0)
+				begin
+					if((Q[0]==0)&&(Q_1==1))
+						A<=A+M;
+					else if ((Q[0]==1)&&(Q_1==0)) 
+						A<=A-M;
+				end
+				state<=1;
+		end
+		
+		else if((state==1)&&(count!=0))
+			begin
+				{A,Q,Q_1}= {A[15],A,Q};
+				count<=count-1;
+				state<=0;
+			end	
+		
+		else if ((count==0)&&(count_exp_sin_cos<=10))
+			begin
+				if ((state_2==0)&&(count_exp_sin_cos!=10))
+				begin
+					product <={A,Q};
+					state_2<=1;	
+				end
+				else if ((state_2==1)&&(count_exp_sin_cos!=10))
+				begin	
+					A<=0;
+					M<=product[15:0];
+					Q<=inp_exp_x;
+					Q_1<=0;
+					state_2<=2;
+				end
+				else if ((state_2==2)&&(count_exp_sin_cos!=10))
+				begin
+					count<=16;
+					state_2<=0;
+					state<=0;
+					count_exp_sin_cos<=count_exp_sin_cos+1;
+				end
+			end
+	end
+	
+	/*always @(posedge clk)
+	begin
+			begin	
+				case (count_exp_sin_cos)
+				4'b0010 :count_exp_sin_cos<=3;
+				4'b0011 :count_exp_sin_cos<=4;
+				4'b0100 :count_exp_sin_cos<=5;
+				4'b0101 :count_exp_sin_cos<=6;
+				4'b0110 :count_exp_sin_cos<=7;
+				4'b0111 :count_exp_sin_cos<=8;
+				4'b1000 :count_exp_sin_cos<=9;
+				4'b1001 :count_exp_sin_cos<=10;
+				endcase
+			end
+	end*/
+endmodule

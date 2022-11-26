@@ -1,0 +1,42 @@
+# Reading C:/ee314/ee314/modelsim_ase/tcl/vsim/pref.tcl 
+# do hw_3_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\ee314\ee314\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\ee314\ee314\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/ee314/hw_3/part_a {C:/ee314/hw_3/part_a/booth's_algorithm.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module hw_3
+# 
+# Top level modules:
+# 	hw_3
+# 
+vsim -voptargs=+acc work.hw_3
+# vsim -voptargs=+acc work.hw_3 
+# Loading work.hw_3
+restart
+add wave -position insertpoint  \
+sim:/hw_3/product \
+sim:/hw_3/count \
+sim:/hw_3/clk \
+sim:/hw_3/Q_1 \
+sim:/hw_3/Q \
+sim:/hw_3/Multiplier \
+sim:/hw_3/Multiplicand \
+sim:/hw_3/M \
+sim:/hw_3/A
+force -freeze sim:/hw_3/Multiplier 0000000000001111 0
+force -freeze sim:/hw_3/Multiplicand 0000000000010000 0
+force -freeze sim:/hw_3/clk 1 0, 0 {5 ps} -r 10
+run
+run
+run
+run
+run
+run

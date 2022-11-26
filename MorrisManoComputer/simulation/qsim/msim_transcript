@@ -1,0 +1,176 @@
+# Reading C:/ee314/ee314/modelsim_ase/tcl/vsim/pref.tcl 
+# do hw_2_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\ee314\ee314\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\ee314\ee314\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/ee314/ee314/hw_2 {C:/ee314/ee314/hw_2/hw_2.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module hw_2
+# 
+# Top level modules:
+# 	hw_2
+# 
+vsim work.hw_2
+# vsim work.hw_2 
+# Loading work.hw_2
+add wave -position insertpoint sim:/hw_2/*
+force -freeze sim:/hw_2/clk 1 0, 0 {5 ps} -r 10
+run
+run -all
+vsim work.hw_2
+# vsim work.hw_2 
+# Loading work.hw_2
+vlog -vlog01compat -work work +incdir+C:/ee314/ee314/hw_2 -O0 C:/ee314/ee314/hw_2/hw_2.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module hw_2
+# 
+# Top level modules:
+# 	hw_2
+vsim work.hw_2
+# vsim work.hw_2 
+# Loading work.hw_2
+add wave -position insertpoint sim:/hw_2/*
+force -freeze sim:/hw_2/clk 1 0, 0 {50 ps} -r 100
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position 15  sim:/hw_2/mem_ram
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# WARNING: No extended dataflow license exists
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/ee314/ee314/hw_2/simulation/qsim/wave.do

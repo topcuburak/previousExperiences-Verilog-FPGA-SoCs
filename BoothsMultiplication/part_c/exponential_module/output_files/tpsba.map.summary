@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Fri Jan 03 17:34:28 2020
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Revision Name : tpsba
+Top-level Entity Name : tpsba
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 127
+Total pins : 145
+Total virtual pins : 0
+Total block memory bits : 0
+Total DSP Blocks : 2
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI TX Channels : 0
+Total PLLs : 0
+Total DLLs : 0

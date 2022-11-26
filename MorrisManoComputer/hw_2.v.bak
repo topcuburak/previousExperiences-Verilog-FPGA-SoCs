@@ -1,0 +1,288 @@
+module manos_basic_computer(	
+		input clk,
+		input start,
+		input [15:0] inp_1,
+		output reg [15:0] out_1,
+		output reg [15:0] TR
+		);
+		
+			reg Start; // S flip flop
+			reg [15:0] DR, AC, IR; // TR;	// data reg, accumulator, instruction reg, temp reg
+			reg [11:0] PC, AR;		// program counter, address reg
+			reg [7:0] OUTR, INPR;		// input and output regs
+			reg [3:0] SC;		// timer
+			reg [2:0] D;		// instruction decoder
+			reg Indirect, E, FGI, FGO, IEN, IRQ; // indirect=I flip flop
+			reg [15:0] mem_ram[99:0];			// 4K memory
+	
+	
+	
+	initial
+		begin
+			mem_ram [0]<=16'h7800;		//7800 	CLA PC=0000 (0th loc)
+			mem_ram [1]<=16'h100A;		//100A	at address=10, I put 4. PC==1
+			mem_ram [2]<=16'h100B;		//100B	at address=11, I put 5. PC==2
+			mem_ram [3]<=16'h7800;		//7800 	CLA again, PC==3
+			mem_ram [10]<=4;				//
+			mem_ram [11]<=5;
+			//mem_ram [15:0][1]<=			
+			SC<=0;		//sequence counter that counts time T1, T2...
+			DR<=0;		//data register
+			AC<=0;		//accumulator 
+			IR<=0;		//instruction  register
+			TR<=0;		//temporary register
+			OUTR<=0;		//output register
+			INPR<=0;		//input register
+			AR<=0;		//address register
+			PC<=0;		//program  counter
+			Start<=start;		//start signal
+			Indirect<=0;		//indirect register 
+			E<=0;					//E flag register
+			FGI<=0;				//FGI flag (input flag)
+			FGO<=0;				//FGO flag (output flag)
+			IEN<=0;				//interrupt enable
+			IRQ<=0;				//interrupt request 
+		end
+
+	always @(posedge clk)  // fetching and decode block
+	begin
+		TR<=TR+1;
+		if(SC==0)			//at  SC=0, T0 case, for that case AC<-PC
+			begin
+				AR<=PC;
+				SC<=SC+1;
+			end
+		else if (SC==1)	//at T1, read information from  memory to IR
+			begin
+				IR[15:0]<=mem_ram[AR];
+				PC<=PC+1;		
+				SC<=SC+1;
+			end
+		else if (SC==2)
+			begin
+				D[2:0]=IR[14:12];  //D is the decoded instructions
+				Indirect<=IR[15];		//For controlling type of instruction such as indirect or direct
+				AR[11:0]<=IR[11:0];	//address of operand or address of address of operand.
+				SC<=SC+1;
+			end
+	end
+
+	always@ (posedge clk)
+	begin
+		if((D==3'b111)&(Indirect==1)&(SC==3))
+		begin
+			if(IR[11]==1)
+				begin
+					AC[7:0]<=INPR;		//input is received by accumualator
+					FGI<=0;				
+				end
+			else if(IR[10]==1)
+				begin
+					OUTR<=AC[7:0];		//output is received from accumulator
+					FGO<=0;
+				end
+			else if (IR[9]==1)
+				begin
+					if(FGI==1)
+					PC<=PC+1;
+				end
+			else if (IR[8]==1)
+				begin
+					if(FGO==1)
+					PC<=PC+1;
+				end
+			else if (IR[7]==1)
+				begin
+					IEN<=1;			//interrupt enable signal generated			
+				end
+			else if (IR[6]==1)
+				begin
+					IEN<=0;			//interrupt disable signal generated
+				end
+		end
+	end
+	
+
+	always @(posedge clk) 		//to regulate interrupt signal 
+	begin
+		
+		if(((SC!=0)&(SC!=1)&(SC!=2)&(IEN==1))&((FGI==1)|(FGO==1)))    //if T0'T1'T2'IEN(FGI+FGO), interrupt request  will be  activated
+			begin
+				IRQ<=1;	
+				SC<=0;
+			end
+		else if((IRQ==1)&(SC==0))
+			begin
+				AR<=0;
+				TR<=PC;
+				SC<=SC+1;
+			end
+		else if((IRQ==1)&(SC==1))
+			begin
+				mem_ram[AR]<=TR;
+				PC<=0;
+				SC<=SC+1;
+			end
+		else if((IRQ==1)&(SC==2))
+			begin
+				PC<=PC+1;
+				IEN<=0;
+				IRQ<=0;
+				SC<=0;
+			end
+	end
+
+
+
+	always @(posedge clk) //register reference type instructions 
+	begin
+	out_1<=out_1+1;
+	
+	 
+		if(((D==3'b111)&(Indirect==0))&SC==3) // (((D==3'b111)&(I==0))&&SC==3) is assigned as r in lecture notes
+		begin
+				if(AR[11]==1'b1)   		//clear accumulator 
+					AC<=0;
+				else if (AR[10]==1'b1)	//clear E register
+					E<=0;
+				else if (AR[9]==1'b1)	//complement accumulator instruction
+					AC<=~AC;
+				else if (AR[8]==1'b1)	//complement E instruction
+					E<=E;
+				else if (AR[7]==1'b1)	//circulate to right
+					begin	
+						AC[14:0]<=AC[15:1];
+						E<=AC[0];
+					end
+				else if (AR[6]==1'b1)	//circulate to left
+					begin	
+						AC[15:1]<=AC[14:0];
+						E<=AC[15];
+					end
+				else if (AR[5]==1'b1)	//increment accumulator
+					AC<=AC+1;
+				else if (AR[4]==1'b1)	//Skip Positive accumulator
+					begin
+						if(AC[15]==0)
+						PC<=PC+1;
+					end
+				else if (AR[3]==1'b1)	//Skip Negative Accumulator
+					begin
+						if(AC[15]==1)
+						PC<=PC+1;
+					end
+				else if (AR[2]==1'b1)	//Skip Zero if AC=0
+					begin
+						if(AC[15:0]==16'h00)
+						PC<=PC+1;
+					end
+				else if (AR[1]==1'b1)	//Skip if E=0
+					begin
+						if(E==0)
+						PC<=PC+1;
+					end
+				else 							//HLT
+					Start<=0;
+		end
+		
+	else
+		begin
+		 if (((D!=3'b111)&(Indirect==1))&SC==3)
+			begin
+				AR<=mem_ram[AR];
+				SC<=SC+1;
+			end
+		else if((D==3'b000))  //AND operation
+			begin
+				if(SC==4)
+					begin
+						DR<=mem_ram[AR];
+						SC<=SC+1;
+					end
+				else if(SC==5)
+					begin
+						AC<=AC&DR;
+						SC<=0;
+					end
+			end
+		else if((D==3'b001))	 //ADD
+			begin
+				if(SC==4)
+					begin
+					DR<=mem_ram[AR];
+					SC<=SC+1;
+					end
+				else if (SC==5)
+					begin
+					{E,AC[15:0]}<= AC+DR;
+					SC<=0;
+					end				
+			end
+		
+		else if((D==3'b010))	//LOAD,LDR
+			begin
+				if(SC==4)
+					begin
+						DR<=mem_ram[AR];
+						SC<=SC+1;
+					end
+				else if (SC==5)
+					begin
+						AC<=DR;
+						SC<=0;
+					end
+			end
+
+		else if((D==3'b011))	//store, STR
+			begin
+				if(SC==4)
+					begin
+						mem_ram[AR]<=AC[15:0];
+						SC<=0;
+					end
+			end
+		
+		else if((D==3'b100))	//Branch unconditionally
+			begin
+				if(SC==4)
+					begin
+					PC<=PC+1;
+					end
+			end
+		else if((D==3'b101))	//Branch and save return address
+			begin
+				if(SC==4)
+					begin
+					mem_ram[AR]<=PC;
+					AR<=AR+1;
+					SC<=SC+1;
+					end
+				else if (SC==5)
+					begin
+					PC<=AR;
+					SC<=0;
+					end
+			end
+		else if((D==3'b110))		//ISZ
+			begin
+				if(SC==4)
+					begin
+					DR<=mem_ram[AR];
+					SC<=SC+1;
+					end
+				else if(SC==5)
+					begin
+					DR<=DR+1;
+					SC<=SC+1;
+					end
+				else if(SC==6)
+					begin
+					mem_ram[AR]<=DR;
+						if(DR==0)
+						PC<=PC+1;
+					SC<=0;
+					end
+			end
+	end
+	end
+endmodule

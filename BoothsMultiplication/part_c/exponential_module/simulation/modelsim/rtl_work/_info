@@ -1,0 +1,25 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\ee314\hw_3\part_c\simulation\modelsim
+vtpsba
+!i10b 1
+VB;eMCHiT9Va:TN6IYDY2W1
+r1
+!s85 0
+31
+I:hTL^g7mb:ELIQ[^ojPWH3
+Z1 dC:\ee314\hw_3\part_c\simulation\modelsim
+w1578061464
+8C:/ee314/hw_3/part_c/tpsba.v
+FC:/ee314/hw_3/part_c/tpsba.v
+L0 1
+OV;L;10.1d;51
+o-vlog01compat -work work -O0
+!s100 26_2_AmzFCkbjYMKW5C9n1
+!s108 1578062086.221000
+!s107 C:/ee314/hw_3/part_c/tpsba.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ee314/hw_3/part_c|C:/ee314/hw_3/part_c/tpsba.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+C:/ee314/hw_3/part_c -O0

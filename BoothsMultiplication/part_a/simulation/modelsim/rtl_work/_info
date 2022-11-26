@@ -1,0 +1,25 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\ee314\hw_3\part_a\simulation\modelsim
+vhw_3
+!i10b 1
+!s100 _@QnRda>BL;3ZdjcL[nH63
+I3z^ZDQ[H6=GYMd3K6DGe^3
+V6MWK6=WmW08Z?8L?E^iON1
+Z1 dC:\ee314\hw_3\part_a\simulation\modelsim
+w1577999812
+8C:/ee314/hw_3/part_a/booth's_algorithm.v
+FC:/ee314/hw_3/part_a/booth's_algorithm.v
+L0 1
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1578073790.720000
+!s107 C:/ee314/hw_3/part_a/booth's_algorithm.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ee314/hw_3/part_a|C:/ee314/hw_3/part_a/booth's_algorithm.v|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+C:/ee314/hw_3/part_a -O0

@@ -1,0 +1,21 @@
+|hw_2
+clk => ~NO_FANOUT~
+start => ~NO_FANOUT~
+inp_1[0] => ~NO_FANOUT~
+inp_1[1] => ~NO_FANOUT~
+inp_1[2] => ~NO_FANOUT~
+inp_1[3] => ~NO_FANOUT~
+inp_1[4] => ~NO_FANOUT~
+inp_1[5] => ~NO_FANOUT~
+inp_1[6] => ~NO_FANOUT~
+inp_1[7] => ~NO_FANOUT~
+out_1[0] <= <GND>
+out_1[1] <= <GND>
+out_1[2] <= <GND>
+out_1[3] <= <GND>
+out_1[4] <= <GND>
+out_1[5] <= <GND>
+out_1[6] <= <GND>
+out_1[7] <= <GND>
+
+

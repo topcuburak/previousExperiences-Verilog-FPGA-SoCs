@@ -1,0 +1,6 @@
+
+State Machine - |factorial|state_2
+Name state_2.00 state_2.10 state_2.01 
+state_2.00 0 0 0 
+state_2.01 1 0 1 
+state_2.10 1 1 0 

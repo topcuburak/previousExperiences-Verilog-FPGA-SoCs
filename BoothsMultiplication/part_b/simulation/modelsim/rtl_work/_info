@@ -1,0 +1,25 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\ee314\hw_3\part_b\simulation\modelsim
+vfactorial
+!i10b 1
+!s100 Nie^fKX6J[KSkJz35ka><0
+I]S:4JnnP<jmEaYc4KXJAj3
+V`4PagiC@^f:`4]F7NG_9J3
+Z1 dC:\ee314\hw_3\part_b\simulation\modelsim
+w1578005549
+8C:/ee314/hw_3/part_b/factorial.v
+FC:/ee314/hw_3/part_b/factorial.v
+L0 1
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1578074073.159000
+!s107 C:/ee314/hw_3/part_b/factorial.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ee314/hw_3/part_b|C:/ee314/hw_3/part_b/factorial.v|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+C:/ee314/hw_3/part_b -O0

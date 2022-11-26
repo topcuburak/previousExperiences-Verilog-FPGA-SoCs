@@ -1,0 +1,56 @@
+# Reading C:/ee314/ee314/modelsim_ase/tcl/vsim/pref.tcl 
+# do factorial_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\ee314\ee314\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\ee314\ee314\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/ee314/hw_3/part_b {C:/ee314/hw_3/part_b/factorial.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module factorial
+# 
+# Top level modules:
+# 	factorial
+# 
+vsim -voptargs=+acc work.factorial
+# vsim -voptargs=+acc work.factorial 
+# Loading work.factorial
+add wave -position insertpoint  \
+sim:/factorial/product \
+sim:/factorial/clk \
+sim:/factorial/N
+add wave -position insertpoint sim:/factorial/*
+force -freeze sim:/factorial/N 0000000000000111 0
+force -freeze sim:/factorial/clk 1 0, 0 {5 ps} -r 10
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run

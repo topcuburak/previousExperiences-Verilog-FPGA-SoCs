@@ -1,0 +1,25 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\ee314\ee314\hw_2\simulation\qsim
+vhw_2
+!i10b 1
+!s100 >i8H=L7XHen@z>1L@ScR^0
+I]4D?Go?KcNzMl8IZ`Z[lh2
+VM:1diCShd?Mzi>F8UGMd<3
+Z1 dC:\ee314\ee314\hw_2\simulation\qsim
+w1575807243
+8C:/ee314/ee314/hw_2/hw_2.v
+FC:/ee314/ee314/hw_2/hw_2.v
+L0 2
+Z2 OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1575807265.413000
+!s107 C:/ee314/ee314/hw_2/hw_2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ee314/ee314/hw_2|-O0|C:/ee314/ee314/hw_2/hw_2.v|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+C:/ee314/ee314/hw_2 -O0
