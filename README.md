@@ -12,11 +12,11 @@ In this assignment, we were expected to implement the Booth's multiplication alg
 
 ### 2) Morris Mano's Computer
 
-    In this assignment, we were expected to the implement Morris Mano's basic processor such that it covers the instructions given in the appendix of assignment manual. Related source codes whose extension are .v, test program and test bench codes, and simulation results are shared in the following directory. 
+In this assignment, we were expected to the implement Morris Mano's basic processor such that it covers the instructions given in the appendix of assignment manual. Related source codes whose extension are .v, test program and test bench codes, and simulation results are shared in the following directory. 
 
 ### 3) PinBall Game implementation displayed via VGA
 
-    In this game, we needed to implement PinBall game and display it on a monitor via a VGA connection. Here, the inputs would be taken from the user by using the pins of FPGA and output should be discreen on the monitor. Source code and project report is shared in the corresponding directory. 
+In this game, we needed to implement PinBall game and display it on a monitor via a VGA connection. Here, the inputs would be taken from the user by using the pins of FPGA and output should be discreen on the monitor. Source code and project report is shared in the corresponding directory. 
     Also, a demo video recorded before the final submission can be found [here]([url](https://www.youtube.com/watch?v=oJqTAdTknQw&t=3s)).
 
 ### 4) Roketsan Internship
