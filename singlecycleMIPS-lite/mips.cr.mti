@@ -1,0 +1,64 @@
+/home/burak/docs/course/CENG311-CompArch/singlecycleMIPS-lite/control.v {1 {vlog -work work -stats=none /home/burak/docs/course/CENG311-CompArch/singlecycleMIPS-lite/control.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module control
+
+Top level modules:
+	control
+
+} {} {}} /home/burak/docs/course/CENG311-CompArch/singlecycleMIPS-lite/signext.v {1 {vlog -work work -stats=none /home/burak/docs/course/CENG311-CompArch/singlecycleMIPS-lite/signext.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module signext
+
+Top level modules:
+	signext
+
+} {} {}} /home/burak/docs/course/CENG311-CompArch/singlecycleMIPS-lite/shift.v {1 {vlog -work work -stats=none /home/burak/docs/course/CENG311-CompArch/singlecycleMIPS-lite/shift.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module shift
+
+Top level modules:
+	shift
+
+} {} {}} /home/burak/docs/course/CENG311-CompArch/singlecycleMIPS-lite/mult2_to_1_32.v {1 {vlog -work work -stats=none /home/burak/docs/course/CENG311-CompArch/singlecycleMIPS-lite/mult2_to_1_32.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module mult2_to_1_32
+
+Top level modules:
+	mult2_to_1_32
+
+} {} {}} /home/burak/docs/course/CENG311-CompArch/singlecycleMIPS-lite/mult2_to_1_5.v {1 {vlog -work work -stats=none /home/burak/docs/course/CENG311-CompArch/singlecycleMIPS-lite/mult2_to_1_5.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module mult2_to_1_5
+
+Top level modules:
+	mult2_to_1_5
+
+} {} {}} /home/burak/docs/course/CENG311-CompArch/singlecycleMIPS-lite/alucont.v {1 {vlog -work work -stats=none /home/burak/docs/course/CENG311-CompArch/singlecycleMIPS-lite/alucont.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module alucont
+
+Top level modules:
+	alucont
+
+} {} {}} /home/burak/docs/course/CENG311-CompArch/singlecycleMIPS-lite/alu32.v {1 {vlog -work work -stats=none /home/burak/docs/course/CENG311-CompArch/singlecycleMIPS-lite/alu32.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module alu32
+
+Top level modules:
+	alu32
+
+} {} {}} /home/burak/docs/course/CENG311-CompArch/singlecycleMIPS-lite/processor.v {1 {vlog -work work -stats=none /home/burak/docs/course/CENG311-CompArch/singlecycleMIPS-lite/processor.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module processor
+
+Top level modules:
+	processor
+
+} {} {}} /home/burak/docs/course/CENG311-CompArch/singlecycleMIPS-lite/adder.v {1 {vlog -work work -stats=none /home/burak/docs/course/CENG311-CompArch/singlecycleMIPS-lite/adder.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module adder
+
+Top level modules:
+	adder
+
+} {} {}}
