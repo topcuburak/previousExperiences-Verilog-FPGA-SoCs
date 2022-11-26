@@ -1,6 +1,6 @@
 There are 4 different works from my previous experiences related to usage of FPGAs, SoCs, coding with verilog and simulations via Modelsim and Vivado. 
 
-### 1) Implementation of Complicated mathematical operations based on Booth's Multiplication Algorithm
+### 1) Implementation of Complicated mathematical operations based on Booth's Multiplication Algorithm ###
 
     In this assignment, we were expected to implement the Booth's multiplication algorithm with verilog. Then, we were needed to expand it provide below complicated mathematical operations. In the folder, related codes with .v extensions, simulation results and comments shared in addition to the assignment manual.
     
