@@ -19,6 +19,6 @@ In this assignment, we were expected to the implement Morris Mano's basic proces
 In this game, we needed to implement PinBall game and display it on a monitor via a VGA connection. Here, the inputs would be taken from the user by using the pins of FPGA and output should be discreen on the monitor. Source code and project report is shared in the corresponding directory. 
     Also, a demo video recorded before the final submission can be found [here](https://www.youtube.com/watch?v=oJqTAdTknQw&t=3s).
     
-
 ### 4) Roketsan Internship
+This is the outcome of the compulsory internship completed in the Roketsan. Roketsan is one of the most popular Defense Industry company of Turkey. Over there, they wanted me to implement edge detection algorithm by using FAST and BRIEF algorithms in Verilog, and test it via a Xilinx Zynq SoC. I have shared the related internship report where you can find lots of codes as appended to the below of it. Also, there are some output pictures to track the correctness of edge detection. 
 
