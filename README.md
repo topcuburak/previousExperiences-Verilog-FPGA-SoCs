@@ -1,4 +1,4 @@
-There are four works from my previous experiences related to the using of FPGAs, SoCs, coding with Verilog and simulations via Modelsim and Vivado. 
+Here are five works from my previous experiences related to using FPGAs, SoCs, coding with Verilog, and simulations via Modelsim and Vivado. 
 
 ### 1) Implementation of Complicated mathematical operations based on Booth's Multiplication Algorithm
 
