@@ -22,5 +22,5 @@ In this game, we needed to implement the PinBall game and display it on a monito
 This work is the outcome of the compulsory internship completed in the Roketsan. Roketsan is one of the most popular Defense Industry companies in Turkey. Over there, they wanted me to implement an edge detection algorithm by using FAST and BRIEF algorithms in Verilog and test it via a Xilinx Zynq SoC. I have shared the related internship report, where many different codes are appended below. Also, some output pictures are shared to track the correctness of edge detection.
 
 ### 5) Single Cycle MIPS processor
-This is the single cycle MIPS processor implementation that I teach for the Computer Architecture course as a TA. 
+This is the single-cycle MIPS processor implementation I teach as a TA for the Computer Architecture course. 
 
